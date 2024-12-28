@@ -11,11 +11,11 @@ const dotenv = require('dotenv');
 const User = require("./models/User");
 
 const app = express();
-// app.use(cors());
 app.use(cors({
-  origin: process.env.REACT_APP_FRONTEND_URL || 'http://localhost:3000',
+  origin: process.env.REACT_APP_FRONTEND_URL || 'http://localhost:5173',
   credentials: true
 }));
+
 app.use(bodyParser.json());
 dotenv.config();
 
