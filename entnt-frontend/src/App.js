@@ -13,7 +13,7 @@ const App = () => {
   return (
     <ThemeContextProvider>
       <div style={{ height: 400, width: "100%" }}>
-        <Router>
+        {/* <Router>
           <Routes>
             <Route path="/" element={<Login />} />
             <Route path="/admin-login" element={<AdminLogin />} />
@@ -34,6 +34,16 @@ const App = () => {
                 </ProtectedRoute>
               }
             />
+          </Routes>
+        </Router> */}
+
+        <Router>
+          <Routes>
+            <Route path="/" element={<Login />} />
+            <Route path="/admin-login" element={<AdminLogin />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/admin-dashboard" element={<AdminDashboard />} />
+            <Route path="/user-dashboard" element={<UserDashboard />} />
           </Routes>
         </Router>
       </div>
