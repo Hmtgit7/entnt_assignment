@@ -12,7 +12,7 @@ const User = require("./models/User");
 
 const app = express();
 app.use(cors({
-  origin: process.env.REACT_APP_FRONTEND_URL || 'http://localhost:5173',
+  origin: process.env.REACT_APP_FRONTEND_URL || 'http://localhost:5173'|| 'http://localhost:3000',
   credentials: true
 }));
 
