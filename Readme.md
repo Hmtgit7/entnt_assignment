@@ -98,9 +98,9 @@ npm install react react-dom react-router-dom chart.js react-chartjs-2
 
 ## Hosting info
 
-- Backend host on render
+- Backend host on render : ``` https://www.render.com```
 
-- Frontend host on netlify
+- Frontend host on netlify : ```https://www.netlify.com/```
 
 
 ## File Structure
@@ -183,7 +183,7 @@ entnt-backend/
 Link to the live demo: [https://communication-calendar.netlify.app/](https://communication-calendar.netlify.app/)
 
 <!-- ![Admin Dashboard](https://github.com/Hmtgit7/entnt-frontend/blob/main/src/assets/images/admin-dashboard.png?raw=true) -->
-![Register Page](../../entnt-frontend/public/assests/register.png)
-![Login Page](../../entnt-frontend/public/assests/login.png)
-![User Dashboard](../../entnt-frontend/public/assests/user-dashboard.png)
-![Calendar View](../../entnt-frontend/public/assests/calendar.png)
+![Register Page](entnt-frontend/public/assests/register.png)
+![Login Page](entnt-frontend/public/assests/login.png)
+![User Dashboard](entnt-frontend/public/assests/user-dashboard.png)
+![Calendar View](entnt-frontend/public/assests/calendar.png)
