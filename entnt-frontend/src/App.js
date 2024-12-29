@@ -8,12 +8,13 @@ import ProtectedRoute from "./components/ProtectedRoutes";
 import Register from "./components/Register";
 import AdminLogin from "./components/AdminLogin";
 import { ThemeContextProvider } from "./context/ThemeContext";
+import AnalyticsDashboard from "./pages/AnalyticsDashboard";
 
 const App = () => {
   return (
     <ThemeContextProvider>
       <div style={{ height: 400, width: "100%" }}>
-        {/* <Router>
+        <Router>
           <Routes>
             <Route path="/" element={<Login />} />
             <Route path="/admin-login" element={<AdminLogin />} />
@@ -34,18 +35,27 @@ const App = () => {
                 </ProtectedRoute>
               }
             />
+            <Route
+              path="/analytical-dashboard"
+              element={
+                <ProtectedRoute allowedRoles={["admin", "user"]}>
+                  <AnalyticsDashboard />
+                </ProtectedRoute>
+              }
+            />
           </Routes>
-        </Router> */}
+        </Router>
 
-        <Router>
+        {/* <Router>
           <Routes>
             <Route path="/" element={<Login />} />
             <Route path="/admin-login" element={<AdminLogin />} />
             <Route path="/register" element={<Register />} />
             <Route path="/admin-dashboard" element={<AdminDashboard />} />
             <Route path="/user-dashboard" element={<UserDashboard />} />
+            <Route path="/analytical-dashboard" element={<AnalyticsDashboard />} />
           </Routes>
-        </Router>
+        </Router> */}
       </div>
     </ThemeContextProvider>
   );
