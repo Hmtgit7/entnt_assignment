@@ -202,7 +202,8 @@ entnt-backend/
 ## LIVE DEMO Pictures
 Link to the live demo: [https://communication-calendar.netlify.app/](https://communication-calendar.netlify.app/)
 
-\n\n
+#### Desktop View
+
 ![Register Page](entnt-frontend/public/assests/signup.png)
 ![Login Page](entnt-frontend/public/assests/login.png)
 ![User Dashboard](entnt-frontend/public/assests/user-dashboard.png)
@@ -212,3 +213,7 @@ Link to the live demo: [https://communication-calendar.netlify.app/](https://com
 ![Admin Dashboard](entnt-frontend/public/assests/admim.png)
 ![Analytics Dashboard](entnt-frontend/public/assests/analytics-1.png)
 ![Analytics Dashboard](entnt-frontend/public/assests/analytics-2.png)
+
+#### Mobile View
+
+![Register Page](entnt-frontend/public/assests/mobile.png)
