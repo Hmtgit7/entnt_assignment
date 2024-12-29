@@ -46,6 +46,9 @@ You can view a live demo of the application at [https://communication-calendar.n
 - Navigatin from anlytical dashboard to user dashboard
 - Navigatin from admin dashboard to analytical dashboard
 
+### Mobile Responsive
+- Fully responsive design for optimal viewing on mobile devices.
+
 
 ### Dark Mode and Light Mode
 - Toggle between dark and light modes for a personalized experience.

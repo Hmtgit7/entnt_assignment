@@ -59,6 +59,7 @@ const AnalyticsDashboard = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+
   const COLORS = [
     theme.palette.primary.main,
     theme.palette.secondary.main,
@@ -195,13 +196,24 @@ const AnalyticsDashboard = () => {
           <AssessmentIcon />
           Analytics Dashboard
         </Typography>
-        <Button
+        {/* <Button
             variant="outlined"
             onClick={handleBack}
             sx={{ mr: 2 }}
           >
             Back to Dashboard
-          </Button>
+          </Button> */}
+
+        <Button
+          variant="outlined"
+          onClick={() => navigate(role === 'admin' ? '/admin-dashboard' : '/user-dashboard')}
+          sx={{
+            borderRadius: 2,
+            textTransform: 'none'
+          }}
+        >
+          Back to Dashboard
+        </Button>
 
         <Box sx={{ display: 'flex', gap: 2 }}>
           <FormControl
@@ -224,7 +236,7 @@ const AnalyticsDashboard = () => {
               <MenuItem value="year">Year</MenuItem>
             </Select>
           </FormControl>
-          
+
           <Button
             variant="outlined"
             startIcon={<DownloadIcon />}

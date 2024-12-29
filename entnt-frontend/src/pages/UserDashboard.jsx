@@ -175,7 +175,7 @@ const UserDashboard = () => {
       <Container maxWidth="lg">
         <Box py={4}>
           {/* Header */}
-          <Paper
+          {/* <Paper
             elevation={0}
             sx={{
               display: "flex",
@@ -225,6 +225,89 @@ const UserDashboard = () => {
                 sx={{
                   borderRadius: "8px",
                   textTransform: "none",
+                }}
+              >
+                Logout
+              </Button>
+            </Box>
+          </Paper> */}
+
+          {/* Header */}
+          <Paper
+            elevation={0}
+            sx={{
+              display: "flex",
+              flexDirection: { xs: 'column', sm: 'row' }, // Stack on mobile
+              justifyContent: "space-between",
+              alignItems: "center",
+              gap: { xs: 2, sm: 0 }, // Add gap when stacked
+              mb: 4,
+              p: 2,
+              borderRadius: 2,
+              bgcolor: 'background.paper',
+              position: 'relative'
+            }}
+          >
+            <Box display="flex" alignItems="center">
+              <DashboardIcon
+                sx={{
+                  mr: 2,
+                  color: "primary.main",
+                  fontSize: { xs: 30, sm: 40 } // Smaller icon on mobile
+                }}
+              />
+              <Typography
+                variant="h4"
+                fontWeight="bold"
+                color="primary.main"
+                sx={{
+                  fontSize: { xs: '1.5rem', sm: '2rem' } // Smaller text on mobile
+                }}
+              >
+                User Dashboard
+              </Typography>
+            </Box>
+
+            <Box
+              display="flex"
+              alignItems="center"
+              gap={2}
+              flexWrap="wrap" // Allow wrapping on very small screens
+              justifyContent={{ xs: 'center', sm: 'flex-end' }}
+              width={{ xs: '100%', sm: 'auto' }}
+            >
+              <Button
+                variant="contained"
+                color="primary"
+                onClick={() => navigate('/analytical-dashboard')}
+                sx={{
+                  borderRadius: "8px",
+                  textTransform: "none",
+                  fontSize: { xs: '0.875rem', sm: '1rem' }
+                }}
+              >
+                View Analytics
+              </Button>
+              <IconButton
+                onClick={colorMode.toggleColorMode}
+                sx={{
+                  bgcolor: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.05)' : 'rgba(0, 0, 0, 0.05)',
+                  '&:hover': {
+                    bgcolor: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)',
+                  }
+                }}
+              >
+                {theme.palette.mode === 'dark' ? <LightMode /> : <DarkMode />}
+              </IconButton>
+              <Button
+                startIcon={<LogoutIcon />}
+                variant="contained"
+                color="error"
+                onClick={handleLogout}
+                sx={{
+                  borderRadius: "8px",
+                  textTransform: "none",
+                  fontSize: { xs: '0.875rem', sm: '1rem' }
                 }}
               >
                 Logout

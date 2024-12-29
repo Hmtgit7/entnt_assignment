@@ -66,7 +66,7 @@ const AdminDashboard = () => {
     }}>
       <Container maxWidth="xl">
         {/* Header */}
-        <StyledPaper
+        {/* <StyledPaper
           elevation={theme.palette.mode === 'dark' ? 2 : 1}
           sx={{
             p: 2,
@@ -133,6 +133,81 @@ const AdminDashboard = () => {
                   transform: 'translateY(-2px)',
                   boxShadow: theme.shadows[8],
                 }
+              }}
+            >
+              Logout
+            </Button>
+          </Box>
+        </StyledPaper> */}
+
+        {/* Header */}
+        <StyledPaper
+          elevation={theme.palette.mode === 'dark' ? 2 : 1}
+          sx={{
+            p: 2,
+            mb: 4,
+            display: 'flex',
+            flexDirection: { xs: 'column', sm: 'row' }, // Stack on mobile
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            gap: { xs: 2, sm: 0 } // Add gap when stacked
+          }}
+        >
+          <Box display="flex" alignItems="center">
+            <DashboardIcon
+              sx={{
+                mr: 2,
+                color: 'primary.main',
+                fontSize: { xs: 30, sm: 40 }, // Smaller icon on mobile
+              }}
+            />
+            <Typography
+              variant="h4"
+              fontWeight="bold"
+              color="primary"
+              sx={{
+                fontSize: { xs: '1.5rem', sm: '2rem' }, // Smaller text on mobile
+                background: theme.palette.mode === 'dark'
+                  ? 'linear-gradient(45deg, #90caf9 30%, #64b5f6 90%)'
+                  : 'linear-gradient(45deg, #1976d2 30%, #2196f3 90%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent'
+              }}
+            >
+              Admin Dashboard
+            </Typography>
+          </Box>
+
+          <Box
+            display="flex"
+            alignItems="center"
+            gap={2}
+            flexWrap="wrap" // Allow wrapping on very small screens
+            justifyContent={{ xs: 'center', sm: 'flex-end' }}
+            width={{ xs: '100%', sm: 'auto' }}
+          >
+            <Button
+              variant="contained"
+              color="primary"
+              onClick={() => navigate('/analytical-dashboard')}
+              sx={{
+                borderRadius: 2,
+                textTransform: 'none',
+                fontSize: { xs: '0.875rem', sm: '1rem' }
+              }}
+            >
+              View Analytics
+            </Button>
+            <ThemeToggle />
+            <Button
+              variant="contained"
+              color="error"
+              startIcon={<LogoutIcon />}
+              onClick={handleLogout}
+              sx={{
+                borderRadius: 2,
+                textTransform: 'none',
+                fontSize: { xs: '0.875rem', sm: '1rem' }
               }}
             >
               Logout
