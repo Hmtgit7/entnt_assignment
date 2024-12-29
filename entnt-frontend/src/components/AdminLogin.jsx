@@ -20,6 +20,7 @@ import {
 } from '@mui/icons-material';
 import { useNavigate } from "react-router-dom";
 import { useThemeContext } from '../context/ThemeContext';
+import axios from "axios"; // Don't forget to import axios
 
 const AdminLogin = () => {
   const navigate = useNavigate();
@@ -35,8 +36,36 @@ const AdminLogin = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleLogin = () => {
-    navigate("/admin-dashboard");
+  const handleLogin = async () => {
+    try {
+      const response = await axios.post(
+        `${process.env.REACT_APP_BACKEND_URL}/api/login`,
+        formData
+      );
+
+      console.log('Login response:', response.data);
+
+      // Check if the user is an admin
+      if (response.data.role !== 'admin') {
+        alert('Access denied. This portal is for administrators only.');
+        return;
+      }
+
+      // Store the token and role in localStorage
+      localStorage.setItem('token', response.data.token);
+      localStorage.setItem('role', response.data.role);
+
+      console.log('Stored values:', {
+        token: localStorage.getItem('token'),
+        role: localStorage.getItem('role')
+      });
+
+      // Navigate to admin dashboard
+      navigate("/admin-dashboard");
+    } catch (error) {
+      alert(error.response?.data?.error || 'Login failed. Please try again.');
+      console.error('Login error:', error);
+    }
   };
 
   const handleUserLogin = () => {

@@ -43,9 +43,26 @@ const Login = () => {
         `${process.env.REACT_APP_BACKEND_URL}/api/login`,
         formData
       );
+      
+      // Debug logs
+      console.log('Login response:', response.data);
+      
       localStorage.setItem("token", response.data.token);
       localStorage.setItem("role", response.data.role);
-      navigate("/user-dashboard");
+      
+      console.log('Stored values:', {
+        token: localStorage.getItem("token"),
+        role: localStorage.getItem("role")
+      });
+
+      // Role-based navigation
+      if (response.data.role === "admin") {
+        // Redirect admin users to admin login
+        alert("Please use admin login for administrator access");
+        navigate("/admin-login");
+      } else {
+        navigate("/user-dashboard");
+      }
     } catch (error) {
       alert("Error logging in: " + error.response?.data?.error || 'Login failed');
     }
