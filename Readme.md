@@ -33,6 +33,20 @@ You can view a live demo of the application at [https://communication-calendar.n
 - Overdue communication trends.
 - Interactive charts using Chart.js.
 
+### Login and Registration
+- Secure user authentication using JSON Web Tokens (JWT).
+- User registration for creating new accounts.
+
+### Responsive Design
+- Optimized for various screen sizes and devices.
+
+### clickable button
+- Clickable buttons for easy navigation.
+- Navigatin from user dashboard to anlytical dashboard
+- Navigatin from anlytical dashboard to user dashboard
+- Navigatin from admin dashboard to analytical dashboard
+
+
 ### Dark Mode and Light Mode
 - Toggle between dark and light modes for a personalized experience.
 
@@ -126,6 +140,7 @@ entnt-frontend/
 │   │   └── ThemeContext.jsx
 │   ├── pages/
 │   │   ├── AdminDashboard.jsx
+|   │   ├── AnalyticsDashboard.jsx
 │   │   └── UserDashboard.jsx
 │   ├── App.jsx
 │   ├── index.css
@@ -138,12 +153,14 @@ entnt-frontend/
 ```
 entnt-backend/
 ├── controllers/
+│   ├── analyticsController.js
 │   ├── authController.js
 │   ├── communicationController.js
 │   ├── communicationMethodController.js
 │   ├── companyController.js
 │   ├── notificationController.js
-|---routes/
+├── routes/
+|   ├── analytics.js
 │   ├── authRoutes.js
 │   ├── communicationRoutes.js
 │   ├── communicationMethodRoutes.js
@@ -182,8 +199,13 @@ entnt-backend/
 ## LIVE DEMO Pictures
 Link to the live demo: [https://communication-calendar.netlify.app/](https://communication-calendar.netlify.app/)
 
-<!-- ![Admin Dashboard](https://github.com/Hmtgit7/entnt-frontend/blob/main/src/assets/images/admin-dashboard.png?raw=true) -->
+\n\n
 ![Register Page](entnt-frontend/public/assests/signup.png)
 ![Login Page](entnt-frontend/public/assests/login.png)
 ![User Dashboard](entnt-frontend/public/assests/user-dashboard.png)
 ![Calendar View](entnt-frontend/public/assests/calendar.png)
+![Dark Mode](entnt-frontend/public/assests/Dark.png)
+![Light Mode](entnt-frontend/public/assests/light.png)
+![Admin Dashboard](entnt-frontend/public/assests/admim.png)
+![Analytics Dashboard](entnt-frontend/public/assests/analytics-1.png)
+![Analytics Dashboard](entnt-frontend/public/assests/analytics-2.png)
