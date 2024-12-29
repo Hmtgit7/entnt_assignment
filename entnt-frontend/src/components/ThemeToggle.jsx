@@ -1,26 +1,3 @@
-// import React from 'react';
-// import { IconButton, useTheme } from '@mui/material';
-// import { Brightness4, Brightness7 } from '@mui/icons-material';
-// import { useThemeContext } from '../context/ThemeContext';
-
-// const ThemeToggle = () => {
-//   const theme = useTheme();
-//   const colorMode = useThemeContext();
-
-//   return (
-//     <IconButton
-//       onClick={colorMode.toggleColorMode}
-//       color="inherit"
-//       sx={{ ml: 1 }}
-//       aria-label="toggle theme"
-//     >
-//       {theme.palette.mode === 'dark' ? <Brightness7 /> : <Brightness4 />}
-//     </IconButton>
-//   );
-// };
-
-// export default ThemeToggle;
-
 import React from 'react';
 import { IconButton, useTheme } from '@mui/material';
 import { Brightness4, Brightness7 } from '@mui/icons-material';
