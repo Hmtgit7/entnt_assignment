@@ -53,8 +53,8 @@ const AdminDashboard = () => {
   };
 
   const statsData = [
-    { title: 'Total Companies', value: '150+', icon: <BusinessIcon sx={{ fontSize: 40 }}/> },
-    { title: 'Communication Methods', value: '10', icon: <ForumIcon sx={{ fontSize: 40 }}/> },
+    { title: 'Total Companies', value: '150+', icon: <BusinessIcon sx={{ fontSize: 40 }} /> },
+    { title: 'Communication Methods', value: '10', icon: <ForumIcon sx={{ fontSize: 40 }} /> },
   ];
 
   return (
@@ -77,9 +77,9 @@ const AdminDashboard = () => {
           }}
         >
           <Box display="flex" alignItems="center">
-            <DashboardIcon 
-              sx={{ 
-                mr: 2, 
+            <DashboardIcon
+              sx={{
+                mr: 2,
                 color: 'primary.main',
                 fontSize: 40,
                 animation: 'pulse 2s infinite',
@@ -88,14 +88,14 @@ const AdminDashboard = () => {
                   '50%': { opacity: 0.7 },
                   '100%': { opacity: 1 },
                 }
-              }} 
+              }}
             />
-            <Typography 
-              variant="h4" 
-              fontWeight="bold" 
+            <Typography
+              variant="h4"
+              fontWeight="bold"
               color="primary"
               sx={{
-                background: theme.palette.mode === 'dark' 
+                background: theme.palette.mode === 'dark'
                   ? 'linear-gradient(45deg, #90caf9 30%, #64b5f6 90%)'
                   : 'linear-gradient(45deg, #1976d2 30%, #2196f3 90%)',
                 WebkitBackgroundClip: 'text',
@@ -106,7 +106,19 @@ const AdminDashboard = () => {
             </Typography>
           </Box>
 
+
           <Box display="flex" alignItems="center" gap={2}>
+            <Button
+              variant="contained"
+              color="primary"
+              onClick={() => navigate('/analytical-dashboard')}
+              sx={{
+                borderRadius: 2,
+                textTransform: 'none'
+              }}
+            >
+              View Analytics
+            </Button>
             <ThemeToggle />
             <Button
               variant="contained"
@@ -133,30 +145,30 @@ const AdminDashboard = () => {
           {statsData.map((stat, index) => (
             <Grid item xs={12} sm={6} key={index}>
               <StyledCard>
-                <Box 
-                  p={3} 
-                  display="flex" 
-                  alignItems="center" 
+                <Box
+                  p={3}
+                  display="flex"
+                  alignItems="center"
                   justifyContent="space-between"
                 >
                   <Box>
-                    <Typography 
-                      variant="h6" 
-                      color="text.secondary" 
+                    <Typography
+                      variant="h6"
+                      color="text.secondary"
                       gutterBottom
                     >
                       {stat.title}
                     </Typography>
-                    <Typography 
-                      variant="h4" 
-                      color="primary.main" 
+                    <Typography
+                      variant="h4"
+                      color="primary.main"
                       fontWeight="bold"
                     >
                       {stat.value}
                     </Typography>
                   </Box>
-                  <Box 
-                    sx={{ 
+                  <Box
+                    sx={{
                       color: 'primary.main',
                       opacity: 0.8
                     }}
@@ -177,20 +189,20 @@ const AdminDashboard = () => {
             mb: 4,
           }}
         >
-          <Box 
-            mb={3} 
-            display="flex" 
+          <Box
+            mb={3}
+            display="flex"
             alignItems="center"
           >
-            <BusinessIcon 
-              sx={{ 
-                mr: 2, 
+            <BusinessIcon
+              sx={{
+                mr: 2,
                 color: 'primary.main',
                 fontSize: 30
-              }} 
+              }}
             />
-            <Typography 
-              variant="h5" 
+            <Typography
+              variant="h5"
               fontWeight="bold"
               color="text.primary"
             >
@@ -207,20 +219,20 @@ const AdminDashboard = () => {
             p: 3,
           }}
         >
-          <Box 
-            mb={3} 
-            display="flex" 
+          <Box
+            mb={3}
+            display="flex"
             alignItems="center"
           >
-            <ForumIcon 
-              sx={{ 
-                mr: 2, 
+            <ForumIcon
+              sx={{
+                mr: 2,
                 color: 'primary.main',
                 fontSize: 30
-              }} 
+              }}
             />
-            <Typography 
-              variant="h5" 
+            <Typography
+              variant="h5"
               fontWeight="bold"
               color="text.primary"
             >
