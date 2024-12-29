@@ -216,4 +216,4 @@ Link to the live demo: [https://communication-calendar.netlify.app/](https://com
 
 #### Mobile View
 
-![Register Page](entnt-frontend/public/assests/mobile.png)
+![Register Page](entnt-frontend/public/assests/Mobile.png)
